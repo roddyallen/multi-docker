@@ -24,3 +24,5 @@ after_success:
 - docker push cumulus96/multi-nginx
 - docker push cumulus96/multi-server
 - docker push cumulus96/multi-worker
+
+# Testing travis build
