@@ -17,8 +17,10 @@ after_success:
   - docker build -t cumulus96/multi-worker ./worker 
 
 # Log into Docker
-#  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" -- password-stdin
-  - docker login -u "$DOCKER_ID" -p "$DOCKER_PASSWORD" docker.io
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+#  - docker login -u "$DOCKER_ID" -p "$DOCKER_PASSWORD" docker.io
+#  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+
 
 # Take images and push to docker hub
   - docker push cumulus96/multi-client
